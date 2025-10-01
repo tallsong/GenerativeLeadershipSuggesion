@@ -9,6 +9,11 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+  build: {
+    // Change the output directory from the default 'dist' to 'build' here:
+    outDir: 'build', 
+  },
+  base: '/GenerativeLeadershipSuggesion/',
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
     alias: {
